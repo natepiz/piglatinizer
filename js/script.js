@@ -5,13 +5,12 @@ $( "document" ).ready(function() {
 
 
   $("button").click(
+
       function() {
        let word =   $("input").val();
-       $(".output").text(word + "ay");
-       let vowls = ["a","e","i","o","u","and sometimes y"];
-    //hey nate
+       let FirstLetter = word.charAt(0);
+       let n = word.length;
+       let rest = word.slice(1, n);
+       $(".output").text(rest+FirstLetter+"ay");
       });
-
-
-
 });
